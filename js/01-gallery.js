@@ -1,8 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
-
 const gallery = document.querySelector(".gallery");
 const markup = galleryItems
   .map(
@@ -26,7 +24,7 @@ gallery.addEventListener("click", (event) => {
     return;
   }
   const instance = basicLightbox.create(`
-    <img src="${event.target.dataset.source}" width="800", height ="600">
+    <img src="${event.target.dataset.source}"width="800" height ="600">
   `);
   instance.show();
   gallery.addEventListener("keydown", (event) => {
